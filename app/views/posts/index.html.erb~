@@ -1,0 +1,35 @@
+<h1>Paraugu saraksts</h1>
+
+<table border="1">
+  <tr>
+    <th>Nr.</th>
+    <th>Ņemšanas vieta</th>
+    <th>Nosaukums</th>
+    <th>Nosakāmie parametri</th>
+    <th>Sērija</th>
+    <th>Daudzums</th>
+    <th>Piezīmes</th>
+    <th>Analītiķis</th>
+ <th></th>
+ <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.name %></td>
+    <td><%= post.title %></td>
+    <td><%= post.content %></td>
+    <td></td>
+    <td></td>
+    <td></td>
+ <td></td>
+ <td></td>
+<td><%= link_to 'Show', post %></td>
+<td><%= link_to 'Edit', edit_post_path(post) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>
